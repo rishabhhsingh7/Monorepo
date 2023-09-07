@@ -3,9 +3,9 @@ name: Deploy Client React
 on:
   push:
     paths:
-      - 'apps/client-react/**'
-      - 'packages/ui/**'
-      - 'packages/common/**'
+      - "apps/client-react/**"
+      - "packages/ui/**"
+      - "packages/common/**"
     branches:
       - master
 
@@ -24,4 +24,4 @@ jobs:
           chmod 600 keyfile
           mkdir -p ~/.ssh
           cp known_hosts ~/.ssh/known_hosts
-          ssh -t -i keyfile ubuntu@ec2-54-215-220-243.us-west-1.compute.amazonaws.com "sudo bash /home/ubuntu/week-12-monorepo-full/apps/client-react/deploy.sh"
+          ssh -t -i keyfile ubuntu@ec2-65-2-38-146.ap-south-1.compute.amazonaws.com "sudo bash /home/ubuntu/monorepo/apps/client-react/deploy.sh"
