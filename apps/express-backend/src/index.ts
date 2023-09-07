@@ -7,7 +7,7 @@ app.use(express.json());
 app.get("/", (req: any, res: any) => {
   let parsedUser = UserInput.safeParse(req.body);
   if (!parsedUser.success) {
-    res.send("Incorrect input for harkirat!");
+    res.send("Incorrect input");
     return;
   }
   res.send("correct input!");
